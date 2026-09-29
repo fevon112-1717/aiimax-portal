@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AiiMAX Technology 內部入口網站：常用系統、教育訓練、公司公告與文件。">
+  <title>AiiMAX Technology｜內部入口網站</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%231d5c96'/%3E%3Cpath d='M8 31 18 9h5l10 22h-7l-6-14-6 14z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body id="home">
+  <a class="skip" href="#main">跳至主要內容</a>
+  <header>
+    <div class="toolbar">
+      <div class="toolbar-brand"><button class="icon-button" id="apps-toggle" aria-label="開啟快速入口" aria-expanded="false" aria-controls="apps-panel"><span class="waffle" aria-hidden="true">⠿</span></button><span>SharePoint</span></div>
+      <form id="search-form" role="search"><span data-icon="search" aria-hidden="true"></span><input type="search" id="search" placeholder="搜尋此網站" aria-label="搜尋此網站" autocomplete="off"><button type="button" id="clear-search" aria-label="清除搜尋" hidden>×</button></form>
+      <div class="toolbar-actions"><button class="icon-button" id="notifications" aria-label="最新公告"><span data-icon="bell"></span></button><button class="icon-button" id="settings" aria-label="顯示設定"><span data-icon="settings"></span></button><button class="icon-button" id="help" aria-label="網站使用說明">?</button><button class="avatar" id="profile" aria-label="預覽模式資訊">EC</button></div>
+      <div id="apps-panel" class="popover" hidden><strong>快速入口</strong><div id="apps-links"></div></div>
+    </div>
+    <div class="site-header">
+      <a href="#home" class="brand" aria-label="AiiMAX Technology 首頁"><img src="assets/logo.png" width="187" height="54" alt="AiiMAX Technology"></a>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="開啟導覽選單"><span data-icon="menu"></span></button>
+      <nav id="main-nav" aria-label="主要導覽">
+        <a href="#home" class="nav-link active" aria-current="page">Home</a>
+        <a data-link="vision" class="nav-link">Vision</a><a data-link="join" class="nav-link">Join Us</a>
+        <details class="nav-dropdown"><summary>相關連結 <span class="chevron"></span></summary><div class="dropdown-content"><a data-link="hr">人資專區</a><a data-link="it">IT 服務</a><a href="#documents">常用文件</a></div></details>
+        <details class="nav-dropdown"><summary>Language <span class="chevron"></span></summary><div class="dropdown-content"><span lang="zh-Hant">✓ 繁體中文</span></div></details>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-label="AiiMAX Technology：連結資源、分享知識、共創未來">
+      <img class="hero-reference" src="assets/hero.png" width="1222" height="241" alt="">
+      <div class="hero-copy"><h1>AiiMAX Technology</h1><p class="tagline">People × Innovation × A Better Tomorrow</p><p class="hero-subtitle">連結資源・分享知識・共創未來</p><p class="hero-motto">TOGETHER<br>WE MAKE<br>IT HAPPEN</p></div>
+    </section>
+    <div class="content">
+      <p id="search-status" role="status" hidden></p>
+      <section id="systems" class="card-section" aria-labelledby="systems-heading"><div class="section-heading"><h2 id="systems-heading">常用系統</h2><button class="text-button" data-directory="systems">查看全部 <span aria-hidden="true">→</span></button></div><div class="card-grid" id="systems-grid"></div></section>
+      <section id="training" class="card-section training" aria-labelledby="training-heading"><div class="section-heading"><h2 id="training-heading">教育訓練 &amp; 文件</h2><button class="text-button" data-directory="training">查看全部 <span aria-hidden="true">→</span></button></div><div class="card-grid" id="training-grid"></div></section>
+      <div class="info-grid">
+        <section class="info-panel" id="announcements" aria-labelledby="news-heading"><div class="panel-heading"><h2 id="news-heading"><span data-icon="megaphone" class="blue"></span>最新公告</h2><button class="text-button" data-directory="news">查看更多 <span aria-hidden="true">→</span></button></div><ul class="news-list" id="news-list"></ul></section>
+        <section class="info-panel" id="documents" aria-labelledby="docs-heading"><div class="panel-heading"><h2 id="docs-heading"><span data-icon="document" class="green"></span>常用文件</h2><button class="text-button" data-directory="documents">查看更多 <span aria-hidden="true">→</span></button></div><ul class="document-list" id="document-list"></ul></section>
+        <section class="info-panel" id="links" aria-labelledby="links-heading"><div class="panel-heading"><h2 id="links-heading"><span data-icon="link" class="blue"></span>其他連結</h2></div><div class="quick-grid" id="quick-grid"></div></section>
+      </div>
+      <p class="preview-note">版型預覽・公告與文件為示範內容，系統連結待設定。</p>
+    </div>
+  </main>
+  <footer><p><strong>AiiMAX Technology</strong><span class="divider">|</span>Internal Portal</p><p>People × Innovation × A Better Tomorrow</p></footer>
+  <dialog id="modal" aria-labelledby="modal-title"><div class="modal-heading"><h2 id="modal-title"></h2><button class="close-button" id="close-modal" aria-label="關閉">×</button></div><div id="modal-body"></div></dialog>
+  <noscript><p class="noscript">請啟用 JavaScript 以查看系統入口、公告及文件清單。</p></noscript>
+</body>
+</html>
